@@ -40,11 +40,7 @@ def get_feedback(guess: str, secret_word: str) -> str:
             
         >>> get_feedback("ARGUE", "MOTTO")
                 "-----"
-
-    
     '''
-    ### BEGIN SOLUTION
-
     output="-----"
     o_list=list(output)
     g_list=list(guess.lower())
@@ -71,12 +67,6 @@ def get_feedback(guess: str, secret_word: str) -> str:
     return letter
 
 
-    ### END SOLUTION 
-
-
-
-
-
 def get_AI_guess(guesses: list[str], feedback: list[str], secret_words: set[str], valid_guesses: set[str]) -> str:
     '''Analyzes feedback from previous guesses/feedback (if any) to make a new guess
         
@@ -89,7 +79,6 @@ def get_AI_guess(guesses: list[str], feedback: list[str], secret_words: set[str]
         Returns:
          str: a valid guess that is exactly 5 uppercase letters
     '''
-    ### BEGIN SOLUTION
     """#1st iteration
     return random.choice(list(valid_words))"""
     global valid_words
@@ -108,7 +97,6 @@ def get_AI_guess(guesses: list[str], feedback: list[str], secret_words: set[str]
         #print(len(valid_words)-len(to_remove))                 
         valid_words-=to_remove
     print(valid_words)
-        
             
     return random.choice(list(valid_words))
     """global goal
@@ -119,7 +107,7 @@ def get_AI_guess(guesses: list[str], feedback: list[str], secret_words: set[str]
         valid_words=valid_words-to_remove
 
     return random.choice(list(valid_words))"""
-    ### END SOLUTION 
+
 
 # TODO: Define and implement your own functions!
 def colored_version (feedbackstr: str, guess:str):
@@ -144,6 +132,7 @@ def colored_version (feedbackstr: str, guess:str):
         print(back_space+full_guesses[i]+back_space)
     print(back_full_line)
     return complete
+
 
 def play_wordle_game():
     #print(get_secret_words())
