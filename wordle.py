@@ -61,7 +61,6 @@ def get_feedback(guess: str, secret_word: str) -> str:
                     sw_list[j] = "*"
                     break     
          
-
     letter = ''.join(o_list)
     feedback_gs.append(letter)
     return letter
